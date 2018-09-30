@@ -129,6 +129,10 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Item" id="iQr-eM-030"/>
+                    <connections>
+                        <outlet property="cameraButton" destination="aTu-9r-ytq" id="pdK-6S-VEp"/>
+                        <outlet property="plusButton" destination="JcH-G2-kWd" id="9F3-hC-Ish"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9FH-9U-zDC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
