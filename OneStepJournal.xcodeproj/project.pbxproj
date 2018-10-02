@@ -60,8 +60,8 @@
 		A1021675213A7DEB00506227 /* OneStepJournal */ = {
 			isa = PBXGroup;
 			children = (
-				A1A91970214202A500BD2CBC /* PhotosCollectionViewController.swift */,
 				A1021676213A7DEB00506227 /* AppDelegate.swift */,
+				A1A91970214202A500BD2CBC /* PhotosCollectionViewController.swift */,
 				A1A9196E2142026C00BD2CBC /* CreateJournalViewController.swift */,
 				A1A9196C2142022D00BD2CBC /* JournalTableViewController.swift */,
 				A1A9196A214201EA00BD2CBC /* JournalDetailViewController.swift */,

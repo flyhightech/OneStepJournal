@@ -23,6 +23,8 @@ class JournalTableViewController: UITableViewController {
         
     }
     
+//    The following code if for when you press either the camera or the plus button.
+    
     @IBAction func cameraTapped(_ sender: Any) {
         performSegue(withIdentifier: "goToNew", sender: "camera")
     }
