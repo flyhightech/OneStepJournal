@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cg5-3H-8Bv">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,7 +15,7 @@
             <objects>
                 <viewController id="7YL-je-kRH" customClass="JournalDetailViewController" customModule="OneStepJournal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="m3o-wk-7DT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="vgC-C2-EuL"/>
@@ -30,7 +30,7 @@
             <objects>
                 <collectionViewController id="cLX-68-zLW" customClass="PhotosCollectionViewController" customModule="OneStepJournal" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Um3-JW-TJ0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Yvn-bl-Pfc">
@@ -84,25 +84,25 @@
             <objects>
                 <tableViewController id="Mco-8f-iHy" customClass="JournalTableViewController" customModule="OneStepJournal" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="oxJ-Nf-dvk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="5Bf-RG-yPu">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="177"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="177"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Gdq-6h-4ha">
-                                    <rect key="frame" x="0.0" y="50" width="375" height="77"/>
+                                    <rect key="frame" x="0.0" y="50" width="414" height="77"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JcH-G2-kWd">
-                                            <rect key="frame" x="0.0" y="0.0" width="184" height="77"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="203.5" height="77"/>
                                             <state key="normal" image="add"/>
                                             <connections>
                                                 <action selector="addTapped:" destination="Mco-8f-iHy" eventType="touchUpInside" id="h0u-5f-3Kx"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTu-9r-ytq">
-                                            <rect key="frame" x="191" y="0.0" width="184" height="77"/>
+                                            <rect key="frame" x="210.5" y="0.0" width="203.5" height="77"/>
                                             <state key="normal" image="whiteCamera"/>
                                             <connections>
                                                 <action selector="cameraTapped:" destination="Mco-8f-iHy" eventType="touchUpInside" id="UQC-P5-UMn"/>
@@ -121,10 +121,10 @@
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="F3y-qa-idW">
-                                <rect key="frame" x="0.0" y="205" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="205" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="F3y-qa-idW" id="wFW-9c-dCd">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -150,22 +150,46 @@
             <objects>
                 <viewController id="Jy2-nr-tsE" customClass="CreateJournalViewController" customModule="OneStepJournal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7go-7X-tcQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yQd-19-QHc">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2qZ-os-7rY">
+                                <rect key="frame" x="0.0" y="34" width="0.0" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="IzO-eT-yNl">
+                                        <barButtonItem key="leftBarButtonItem" title="Exit" id="FGf-2K-Q01"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Save" id="FHY-MB-sPc"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yQd-19-QHc" firstAttribute="top" secondItem="7go-7X-tcQ" secondAttribute="top" id="4oL-gB-yxR"/>
+                            <constraint firstItem="2qZ-os-7rY" firstAttribute="leading" secondItem="c0a-OT-8pJ" secondAttribute="leading" id="5VF-Qo-hru"/>
+                            <constraint firstItem="yQd-19-QHc" firstAttribute="trailing" secondItem="c0a-OT-8pJ" secondAttribute="trailing" id="9uB-ex-2nh"/>
+                            <constraint firstItem="yQd-19-QHc" firstAttribute="leading" secondItem="c0a-OT-8pJ" secondAttribute="leading" id="cN9-Uk-r6i"/>
+                            <constraint firstItem="2qZ-os-7rY" firstAttribute="top" secondItem="yQd-19-QHc" secondAttribute="bottom" id="hne-2O-Onk"/>
+                            <constraint firstItem="c0a-OT-8pJ" firstAttribute="top" secondItem="yQd-19-QHc" secondAttribute="bottom" constant="10" id="oIP-Zl-TlF"/>
+                            <constraint firstItem="2qZ-os-7rY" firstAttribute="trailing" secondItem="c0a-OT-8pJ" secondAttribute="trailing" id="oex-6j-sX6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="c0a-OT-8pJ"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XXH-Ah-pmD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2712" y="-471"/>
+            <point key="canvasLocation" x="2707.2463768115945" y="-472.76785714285711"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tvf-NU-dcf">
             <objects>
                 <navigationController id="AUm-iT-gHS" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BMO-pu-gKJ">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
