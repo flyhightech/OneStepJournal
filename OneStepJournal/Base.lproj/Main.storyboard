@@ -158,24 +158,92 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2qZ-os-7rY">
-                                <rect key="frame" x="0.0" y="34" width="0.0" height="44"/>
+                                <rect key="frame" x="0.0" y="34" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="Title" id="IzO-eT-yNl">
-                                        <barButtonItem key="leftBarButtonItem" title="Exit" id="FGf-2K-Q01"/>
-                                        <barButtonItem key="rightBarButtonItem" title="Save" id="FHY-MB-sPc"/>
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="FGf-2K-Q01"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="FHY-MB-sPc"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hAn-Jd-AEk">
+                                <rect key="frame" x="10" y="782" width="394" height="70"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oCO-Ot-JJ3">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="70"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J4P-bK-t30">
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="Jkx-Pi-GFL"/>
+                                                </constraints>
+                                                <state key="normal" image="calendar"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tex-7A-tYx">
+                                                <rect key="frame" x="80" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="20p-bH-9ye"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="blueCamera"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="oCO-Ot-JJ3" secondAttribute="bottom" id="cm8-Jw-gPh"/>
+                                    <constraint firstItem="oCO-Ot-JJ3" firstAttribute="top" secondItem="hAn-Jd-AEk" secondAttribute="top" id="edr-sJ-RD5"/>
+                                    <constraint firstAttribute="height" constant="70" id="qKY-ct-L2s"/>
+                                    <constraint firstItem="oCO-Ot-JJ3" firstAttribute="leading" secondItem="hAn-Jd-AEk" secondAttribute="leading" id="sTc-j0-Hip"/>
+                                    <constraint firstAttribute="trailing" secondItem="oCO-Ot-JJ3" secondAttribute="trailing" id="wut-Tt-Db3"/>
+                                    <constraint firstItem="oCO-Ot-JJ3" firstAttribute="height" secondItem="hAn-Jd-AEk" secondAttribute="height" id="xiR-ru-be0"/>
+                                </constraints>
+                            </scrollView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cUy-kl-wic">
+                                <rect key="frame" x="0.0" y="78" width="414" height="704"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGf-6x-atv">
+                                <rect key="frame" x="10" y="732" width="394" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="dMo-Zs-czf"/>
+                                </constraints>
+                                <state key="normal" title="Set Date"/>
+                            </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="OLJ-9e-hP1">
+                                <rect key="frame" x="0.0" y="530" width="414" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="NKJ-DB-Ju0"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="560153274.80578601">
+                                    <!--2018-10-02 06:07:54 +0000-->
+                                </date>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="c0a-OT-8pJ" firstAttribute="trailing" secondItem="hAn-Jd-AEk" secondAttribute="trailing" constant="10" id="2dP-xQ-mgj"/>
                             <constraint firstItem="yQd-19-QHc" firstAttribute="top" secondItem="7go-7X-tcQ" secondAttribute="top" id="4oL-gB-yxR"/>
                             <constraint firstItem="2qZ-os-7rY" firstAttribute="leading" secondItem="c0a-OT-8pJ" secondAttribute="leading" id="5VF-Qo-hru"/>
+                            <constraint firstItem="c0a-OT-8pJ" firstAttribute="trailing" secondItem="cUy-kl-wic" secondAttribute="trailing" id="7xC-sq-imH"/>
                             <constraint firstItem="yQd-19-QHc" firstAttribute="trailing" secondItem="c0a-OT-8pJ" secondAttribute="trailing" id="9uB-ex-2nh"/>
+                            <constraint firstItem="c0a-OT-8pJ" firstAttribute="trailing" secondItem="IGf-6x-atv" secondAttribute="trailing" constant="10" id="MTz-of-mhg"/>
+                            <constraint firstItem="hAn-Jd-AEk" firstAttribute="top" secondItem="IGf-6x-atv" secondAttribute="bottom" id="RIc-3d-0bZ"/>
+                            <constraint firstItem="cUy-kl-wic" firstAttribute="top" secondItem="2qZ-os-7rY" secondAttribute="bottom" id="S9H-Dr-9kf"/>
+                            <constraint firstItem="hAn-Jd-AEk" firstAttribute="leading" secondItem="c0a-OT-8pJ" secondAttribute="leading" constant="10" id="YRm-NB-BVr"/>
+                            <constraint firstItem="hAn-Jd-AEk" firstAttribute="top" secondItem="cUy-kl-wic" secondAttribute="bottom" id="Yix-oX-kEA"/>
+                            <constraint firstItem="c0a-OT-8pJ" firstAttribute="bottom" secondItem="hAn-Jd-AEk" secondAttribute="bottom" constant="10" id="aZq-TS-i9r"/>
                             <constraint firstItem="yQd-19-QHc" firstAttribute="leading" secondItem="c0a-OT-8pJ" secondAttribute="leading" id="cN9-Uk-r6i"/>
                             <constraint firstItem="2qZ-os-7rY" firstAttribute="top" secondItem="yQd-19-QHc" secondAttribute="bottom" id="hne-2O-Onk"/>
+                            <constraint firstItem="OLJ-9e-hP1" firstAttribute="trailing" secondItem="2qZ-os-7rY" secondAttribute="trailing" id="k6t-c4-cQV"/>
+                            <constraint firstItem="OLJ-9e-hP1" firstAttribute="leading" secondItem="2qZ-os-7rY" secondAttribute="leading" id="n5b-tO-qV9"/>
                             <constraint firstItem="c0a-OT-8pJ" firstAttribute="top" secondItem="yQd-19-QHc" secondAttribute="bottom" constant="10" id="oIP-Zl-TlF"/>
                             <constraint firstItem="2qZ-os-7rY" firstAttribute="trailing" secondItem="c0a-OT-8pJ" secondAttribute="trailing" id="oex-6j-sX6"/>
+                            <constraint firstItem="IGf-6x-atv" firstAttribute="top" secondItem="OLJ-9e-hP1" secondAttribute="bottom" constant="40" id="s7m-vM-6tT"/>
+                            <constraint firstItem="cUy-kl-wic" firstAttribute="leading" secondItem="c0a-OT-8pJ" secondAttribute="leading" id="uCN-gZ-9og"/>
+                            <constraint firstItem="IGf-6x-atv" firstAttribute="leading" secondItem="c0a-OT-8pJ" secondAttribute="leading" constant="10" id="xW2-nl-MzV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="c0a-OT-8pJ"/>
                     </view>
@@ -216,6 +284,8 @@
     </scenes>
     <resources>
         <image name="add" width="204.80000305175781" height="204.80000305175781"/>
+        <image name="blueCamera" width="204.80000305175781" height="204.80000305175781"/>
+        <image name="calendar" width="204.80000305175781" height="204.80000305175781"/>
         <image name="whiteCamera" width="204.80000305175781" height="204.80000305175781"/>
     </resources>
 </document>
