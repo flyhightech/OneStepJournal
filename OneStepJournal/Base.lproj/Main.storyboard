@@ -219,7 +219,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGf-6x-atv">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGf-6x-atv">
                                 <rect key="frame" x="10" y="732" width="394" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="dMo-Zs-czf"/>
@@ -229,7 +229,7 @@
                                     <action selector="setDateTapped:" destination="Jy2-nr-tsE" eventType="touchUpInside" id="WLC-Io-kKO"/>
                                 </connections>
                             </button>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="OLJ-9e-hP1">
+                            <datePicker hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="OLJ-9e-hP1">
                                 <rect key="frame" x="0.0" y="530" width="414" height="162"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="162" id="NKJ-DB-Ju0"/>
@@ -265,6 +265,7 @@
                         <viewLayoutGuide key="safeArea" id="c0a-OT-8pJ"/>
                     </view>
                     <connections>
+                        <outlet property="aboveNavbarView" destination="yQd-19-QHc" id="LZc-Li-z06"/>
                         <outlet property="bottomConstraint" destination="aZq-TS-i9r" id="XO8-tx-20x"/>
                         <outlet property="datePicker" destination="OLJ-9e-hP1" id="SU8-0N-vmf"/>
                         <outlet property="journalTextView" destination="cUy-kl-wic" id="iHV-Yv-1ph"/>
