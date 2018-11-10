@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CreateJournalViewController: UIViewController {
+class CreateJournalViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var aboveNavbarView: UIView!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
@@ -19,6 +19,9 @@ class CreateJournalViewController: UIViewController {
     @IBOutlet weak var stackView: UIStackView!
     
     var date = Date()
+    var imagePicker = UIImagePickerController()
+    var images : [UIImage] = []
+    var startWithCamera = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,10 +40,19 @@ class CreateJournalViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(KeyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         
+        imagePicker.delegate = self
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         updateDate()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if startWithCamera {
+            startWithCamera = false
+            cameraBtnTapped("")
+        }
     }
     
     func updateDate() {
@@ -69,8 +81,7 @@ class CreateJournalViewController: UIViewController {
     }
 
     @IBAction func cancelBtnTapped(_ sender: Any) {
-        
-        
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func saveBtnTapped(_ sender: Any) {
@@ -95,10 +106,26 @@ class CreateJournalViewController: UIViewController {
     
     @IBAction func cameraBtnTapped(_ sender: Any) {
         
-        
+        imagePicker.sourceType = .photoLibrary
+        present(imagePicker, animated: true, completion: nil)
     }
     
-    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let chosenImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            images.append(chosenImage)
+            
+            let imageView = UIImageView()
+            imageView.heightAnchor.constraint(equalToConstant: 70.0).isActive = true
+            imageView.widthAnchor.constraint(equalToConstant: 70.0).isActive = true
+            imageView.image = chosenImage
+            imageView.contentMode = .scaleAspectFill
+            imageView.clipsToBounds = true
+            stackView.addArrangedSubview(imageView)
+            imagePicker.dismiss(animated: true) {
+                
+            }
+        }
+    }
     
     
     
