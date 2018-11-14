@@ -20,4 +20,21 @@ class Picture : Object {
     @objc dynamic var fullImageName = ""
     @objc dynamic var thumbnailName = ""
     @objc dynamic var entry : Entry?
+    
+    convenience init(image: UIImage) {
+        self.init()
+        fullImageName = imageToURLString(image: image)
+    }
+    
+    func imageToURLString(image:UIImage) -> String {
+        if let imageDate = image.pngData() {
+           let fileName = UUID().uuidString + ".png"
+           var path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+            path?.appendPathComponent(fileName)
+            try? imageDate.write(to: path)
+            return fileName
+            
+        }
+        return ""
+    }
 }
