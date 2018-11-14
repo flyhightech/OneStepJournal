@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class JournalTableViewController: UITableViewController {
 
@@ -19,6 +20,13 @@ class JournalTableViewController: UITableViewController {
 
         cameraButton.imageView?.contentMode = .scaleAspectFit
         plusButton.imageView?.contentMode = .scaleAspectFit
+        
+        if let realm = try? Realm() {
+            let entries = realm.objects(Entry.self)
+            print(entries.first?.text)
+            print(entries.first?.date)
+            print(entries.first?.picture.count)
+        }
         
         
     }
