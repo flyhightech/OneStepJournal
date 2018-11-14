@@ -11,14 +11,13 @@ import RealmSwift
 
 
 class Entry : Object {
-    
     @objc dynamic var text = ""
     @objc dynamic var date = Date()
     let picture = List<Picture>()
 }
 
 class Picture : Object {
-    
     @objc dynamic var fullImageName = ""
-    
+    @objc dynamic var thumbnailName = ""
+    @objc dynamic var entry : Entry?
 }
