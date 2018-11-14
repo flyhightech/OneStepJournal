@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import Toucan
 
 
 class Entry : Object {
@@ -24,6 +25,9 @@ class Picture : Object {
     convenience init(image: UIImage) {
         self.init()
         fullImageName = imageToURLString(image: image)
+        if let smallImage = Toucan(image: image).resize(CGSize(width: 500, height: 500), fitMode: .crop).image {
+            thumbnailName = imageToURLString(image: smallImage)
+        }
     }
     
     func imageToURLString(image:UIImage) -> String {
