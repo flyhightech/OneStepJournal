@@ -23,9 +23,9 @@ class JournalTableViewController: UITableViewController {
         
         if let realm = try? Realm() {
             let entries = realm.objects(Entry.self)
-            print(entries.first?.text)
-            print(entries.first?.date)
-            print(entries.first?.picture.count)
+            print(entries.first?.text as Any)
+            print(entries.first?.date as Any)
+            print(entries.first?.picture.count as Any)
         }
         
         

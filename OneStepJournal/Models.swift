@@ -35,7 +35,7 @@ class Picture : Object {
            let fileName = UUID().uuidString + ".png"
            var path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
             path?.appendPathComponent(fileName)
-            try? imageDate.write(to: path)
+            try? imageDate.write(to: path!)
             return fileName
             
         }

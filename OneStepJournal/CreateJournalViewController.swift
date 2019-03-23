@@ -92,7 +92,7 @@ class CreateJournalViewController: UIViewController, UIImagePickerControllerDele
             entry.date = date
             for image in images {
                 let picture = Picture(image: image)
-                entry.pictures.append(picture)
+                entry.picture.append(picture)
                 picture.entry = entry
                 
             }
