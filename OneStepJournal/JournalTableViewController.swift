@@ -12,8 +12,9 @@ import RealmSwift
 class JournalTableViewController: UITableViewController {
 
     @IBOutlet weak var plusButton: UIButton!
-    
     @IBOutlet weak var cameraButton: UIButton!
+    
+    var entries : Results<Entry>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,14 +22,18 @@ class JournalTableViewController: UITableViewController {
         cameraButton.imageView?.contentMode = .scaleAspectFit
         plusButton.imageView?.contentMode = .scaleAspectFit
         
+        
+    }
+    
+    func getEntries() {
         if let realm = try? Realm() {
-            let entries = realm.objects(Entry.self)
-            print(entries.first?.text as Any)
-            print(entries.first?.date as Any)
-            print(entries.first?.picture.count as Any)
+             entries = realm.objects(Entry.self).sorted(byKeyPath: "date", ascending: false)
+            tableView.reloadData()
         }
-        
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getEntries()
     }
     
 //    The following code if for when you press either the camera or the plus button.
@@ -54,25 +59,28 @@ class JournalTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        if let entries = self.entries {
+            return entries.count
+        } else {
+            return 0 
+        }
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "journalCell", for: indexPath) as? JournalCell {
+            
+            if let entry = entries?[indexPath.row] {
+                cell.previewTextCell.text = entry.text
+            }
+            
+            return cell
+            
+        }
+        return UITableViewCell()
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -119,4 +127,15 @@ class JournalTableViewController: UITableViewController {
     }
     */
 
+}
+
+class JournalCell: UITableViewCell {
+    
+    @IBOutlet weak var previewImageView: UIImageView!
+    @IBOutlet weak var previewTextCell: UILabel!
+    @IBOutlet weak var monthLabel: UILabel!
+    @IBOutlet weak var dayLabel: UILabel!
+    @IBOutlet weak var imageViewWidth: NSLayoutConstraint!
+    
+    
 }

@@ -120,7 +120,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="F3y-qa-idW">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="journalCell" rowHeight="100" id="F3y-qa-idW" customClass="JournalCell" customModule="OneStepJournal" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="205" width="414" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="F3y-qa-idW" id="wFW-9c-dCd">
@@ -128,7 +128,10 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fTc-Bd-AQw">
-                                            <rect key="frame" x="0.0" y="0.0" width="99.5" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="99.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="100" id="v79-H7-E45"/>
+                                            </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oKG-g9-Fte">
                                             <rect key="frame" x="354" y="0.0" width="60" height="21"/>
@@ -159,31 +162,37 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1av-dR-aHg">
-                                            <rect key="frame" x="104.5" y="11" width="244.5" height="78"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="adding a whole lot of needlesss text into the box just so that I can see how many lines you have have in the text box. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1av-dR-aHg">
+                                            <rect key="frame" x="110" y="11" width="234" height="78"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="1av-dR-aHg" firstAttribute="leading" secondItem="fTc-Bd-AQw" secondAttribute="trailing" constant="5" id="1DZ-9c-nPk"/>
+                                        <constraint firstItem="1av-dR-aHg" firstAttribute="leading" secondItem="fTc-Bd-AQw" secondAttribute="trailing" constant="10" id="1DZ-9c-nPk"/>
                                         <constraint firstAttribute="trailing" secondItem="oKG-g9-Fte" secondAttribute="trailing" id="25d-N4-d6s"/>
                                         <constraint firstItem="fTc-Bd-AQw" firstAttribute="top" secondItem="wFW-9c-dCd" secondAttribute="top" id="6Sm-VT-gVl"/>
                                         <constraint firstItem="1av-dR-aHg" firstAttribute="top" secondItem="wFW-9c-dCd" secondAttribute="topMargin" id="97K-uk-2dw"/>
                                         <constraint firstItem="oKG-g9-Fte" firstAttribute="top" secondItem="wFW-9c-dCd" secondAttribute="top" id="Noo-qe-o2d"/>
-                                        <constraint firstItem="fTc-Bd-AQw" firstAttribute="width" secondItem="wFW-9c-dCd" secondAttribute="height" multiplier="1:1" id="S3X-Au-afJ"/>
                                         <constraint firstItem="ORY-Nu-ul0" firstAttribute="top" secondItem="oKG-g9-Fte" secondAttribute="bottom" id="Toz-Xa-VOH"/>
                                         <constraint firstAttribute="bottom" secondItem="fTc-Bd-AQw" secondAttribute="bottom" id="VBC-Oz-SSE"/>
                                         <constraint firstAttribute="trailing" secondItem="v2E-zy-NGa" secondAttribute="trailing" id="XIs-pl-e1K"/>
                                         <constraint firstItem="v2E-zy-NGa" firstAttribute="top" secondItem="ORY-Nu-ul0" secondAttribute="bottom" id="jEa-a7-A6m"/>
                                         <constraint firstItem="fTc-Bd-AQw" firstAttribute="leading" secondItem="wFW-9c-dCd" secondAttribute="leading" id="jXH-NF-xG4"/>
-                                        <constraint firstItem="ORY-Nu-ul0" firstAttribute="leading" secondItem="1av-dR-aHg" secondAttribute="trailing" constant="5" id="nfM-zd-N3g"/>
+                                        <constraint firstItem="ORY-Nu-ul0" firstAttribute="leading" secondItem="1av-dR-aHg" secondAttribute="trailing" constant="10" id="nfM-zd-N3g"/>
                                         <constraint firstAttribute="bottom" secondItem="v2E-zy-NGa" secondAttribute="bottom" id="oAK-pe-YRb"/>
                                         <constraint firstAttribute="trailing" secondItem="ORY-Nu-ul0" secondAttribute="trailing" id="ogQ-57-J8k"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="1av-dR-aHg" secondAttribute="bottom" id="xBY-L3-PoM"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dayLabel" destination="ORY-Nu-ul0" id="3x1-GQ-RZw"/>
+                                    <outlet property="imageViewWidth" destination="v79-H7-E45" id="uzo-9S-g1u"/>
+                                    <outlet property="monthLabel" destination="oKG-g9-Fte" id="W34-z0-h8T"/>
+                                    <outlet property="previewImageView" destination="fTc-Bd-AQw" id="3ua-DS-fSg"/>
+                                    <outlet property="previewTextCell" destination="1av-dR-aHg" id="I9U-VP-Sgy"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
