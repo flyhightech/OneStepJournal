@@ -19,22 +19,18 @@ class CreateJournalViewController: UIViewController, UIImagePickerControllerDele
     @IBOutlet weak var setButton: UIButton!
     @IBOutlet weak var stackView: UIStackView!
     
-    var date = Date()
     var imagePicker = UIImagePickerController()
     var images : [UIImage] = []
     var startWithCamera = false
+    var entry = Entry()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navBar.barTintColor = UIColor(red: 0.298, green: 0.757, blue: 0.988, alpha: 1.00)
-        
         navBar.tintColor = .white
-        
         navBar.isTranslucent = false
-        
         navBar.titleTextAttributes = [.foregroundColor : UIColor.white]
-        
         aboveNavbarView.backgroundColor = UIColor(red: 0.298, green: 0.757, blue: 0.988, alpha: 1.00)
         
         NotificationCenter.default.addObserver(self, selector: #selector(KeyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -57,9 +53,9 @@ class CreateJournalViewController: UIViewController, UIImagePickerControllerDele
     }
     
     func updateDate() {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "E, MMM d, yyyy"
-        navBar.topItem?.title = formatter.string(from: date)
+        
+        navBar.topItem?.title = entry.datePrettyString()
+        
     }
     
     @objc func KeyboardWillHide(notification: Notification) {
@@ -87,9 +83,7 @@ class CreateJournalViewController: UIViewController, UIImagePickerControllerDele
     
     @IBAction func saveBtnTapped(_ sender: Any) {
         if let realm = try? Realm() {
-            let entry = Entry()
             entry.text = journalTextView.text
-            entry.date = date
             for image in images {
                 let picture = Picture(image: image)
                 entry.picture.append(picture)
@@ -110,7 +104,7 @@ class CreateJournalViewController: UIViewController, UIImagePickerControllerDele
         journalTextView.isHidden = false
         datePicker.isHidden = true
         setButton.isHidden = true
-        date = datePicker.date
+        entry.date = datePicker.date
         updateDate()
     }
     
@@ -118,7 +112,7 @@ class CreateJournalViewController: UIViewController, UIImagePickerControllerDele
         journalTextView.isHidden = true
         datePicker.isHidden = false
         setButton.isHidden = false
-        datePicker.date = date
+        datePicker.date = entry.date
     }
     
     @IBAction func cameraBtnTapped(_ sender: Any) {

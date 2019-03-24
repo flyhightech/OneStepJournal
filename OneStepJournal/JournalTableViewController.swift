@@ -11,6 +11,7 @@ import RealmSwift
 
 class JournalTableViewController: UITableViewController {
 
+    @IBOutlet weak var topHeaderView: UIView!
     @IBOutlet weak var plusButton: UIButton!
     @IBOutlet weak var cameraButton: UIButton!
     
@@ -22,6 +23,12 @@ class JournalTableViewController: UITableViewController {
         cameraButton.imageView?.contentMode = .scaleAspectFit
         plusButton.imageView?.contentMode = .scaleAspectFit
         
+        topHeaderView.backgroundColor = UIColor(red: 0.298, green: 0.757, blue: 0.988, alpha: 1.00)
+        
+        navigationController?.navigationBar.barTintColor = UIColor(red: 0.298, green: 0.757, blue: 0.988, alpha: 1.00)
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.white]
         
     }
     
@@ -73,6 +80,15 @@ class JournalTableViewController: UITableViewController {
             
             if let entry = entries?[indexPath.row] {
                 cell.previewTextCell.text = entry.text
+                if let image = entry.picture.first?.thumbNail() {
+                    cell.imageViewWidth.constant = 100
+                    cell.previewImageView.image = image
+                } else {
+                    cell.imageViewWidth.constant = 0
+                }
+                cell.monthLabel.text = entry.monthString()
+                cell.dayLabel.text = entry.dayString()
+                cell.yearLabel.text = entry.yearString()
             }
             
             return cell
@@ -81,6 +97,9 @@ class JournalTableViewController: UITableViewController {
         return UITableViewCell()
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -135,6 +154,7 @@ class JournalCell: UITableViewCell {
     @IBOutlet weak var previewTextCell: UILabel!
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var dayLabel: UILabel!
+    @IBOutlet weak var yearLabel: UILabel!
     @IBOutlet weak var imageViewWidth: NSLayoutConstraint!
     
     
