@@ -60,11 +60,11 @@
             </objects>
             <point key="canvasLocation" x="1177" y="244"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Step One Journal-->
         <scene sceneID="UdU-72-caM">
             <objects>
                 <tabBarController id="cXj-HE-PEc" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="WiB-cH-l5f"/>
+                    <navigationItem key="navigationItem" title="Step One Journal" id="WiB-cH-l5f"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="024-6G-fwZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -352,9 +352,13 @@
         <scene sceneID="tvf-NU-dcf">
             <objects>
                 <navigationController id="AUm-iT-gHS" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BMO-pu-gKJ">
+                    <navigationBar key="navigationBar" clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BMO-pu-gKJ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="cXj-HE-PEc" kind="relationship" relationship="rootViewController" id="TRy-Nh-VkI"/>

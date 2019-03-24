@@ -29,7 +29,7 @@ class JournalTableViewController: UITableViewController {
         navigationController?.navigationBar.tintColor = .white
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.white]
-        
+                
     }
     
     func getEntries() {

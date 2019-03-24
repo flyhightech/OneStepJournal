@@ -16,6 +16,7 @@
 		A1A9196F2142026C00BD2CBC /* CreateJournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A9196E2142026C00BD2CBC /* CreateJournalViewController.swift */; };
 		A1A91971214202A500BD2CBC /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A91970214202A500BD2CBC /* PhotosCollectionViewController.swift */; };
 		A1BE4A7A219C995400D7BD27 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BE4A79219C995400D7BD27 /* Models.swift */; };
+		A1C9347B224845ED0008C505 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C9347A224845ED0008C505 /* SplitViewController.swift */; };
 		F80CF067E4280A657567D3E2 /* Pods_OneStepJournal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F938EF5DB659EEE7D5ECBCC /* Pods_OneStepJournal.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		A1A9196E2142026C00BD2CBC /* CreateJournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateJournalViewController.swift; sourceTree = "<group>"; };
 		A1A91970214202A500BD2CBC /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
 		A1BE4A79219C995400D7BD27 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		A1C9347A224845ED0008C505 /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				A102167D213A7DF600506227 /* Assets.xcassets */,
 				A102167F213A7DF600506227 /* LaunchScreen.storyboard */,
 				A1021682213A7DF600506227 /* Info.plist */,
+				A1C9347A224845ED0008C505 /* SplitViewController.swift */,
 			);
 			path = OneStepJournal;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1021677213A7DEB00506227 /* AppDelegate.swift in Sources */,
+				A1C9347B224845ED0008C505 /* SplitViewController.swift in Sources */,
 				A1A9196D2142022D00BD2CBC /* JournalTableViewController.swift in Sources */,
 				A1A9196F2142026C00BD2CBC /* CreateJournalViewController.swift in Sources */,
 				A1BE4A7A219C995400D7BD27 /* Models.swift in Sources */,
