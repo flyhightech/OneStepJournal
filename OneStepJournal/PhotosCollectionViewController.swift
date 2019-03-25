@@ -47,7 +47,9 @@ class PhotosCollectionViewController: UICollectionViewController, UICollectionVi
                 cell.dateLabel.text = picture.entry?.dayString()
                 cell.monthYearLabel.text = picture.entry?.monthYearString()
             }
+            
              return cell
+            
         }
         
         return UICollectionViewCell()
@@ -55,7 +57,7 @@ class PhotosCollectionViewController: UICollectionViewController, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.size.width/2, height: collectionView.frame.size.height/2)
+        return CGSize(width: collectionView.frame.size.width/2, height: collectionView.frame.size.width/2)
     }
 
     // MARK: UICollectionViewDelegate

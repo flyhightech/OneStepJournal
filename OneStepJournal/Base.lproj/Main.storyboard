@@ -17,13 +17,30 @@
                     <view key="view" contentMode="scaleToFill" id="m3o-wk-7DT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RE0-UI-XzQ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="763"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="D6j-qh-9DL">
+                                        <rect key="frame" x="43" y="34" width="110" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </stackView>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RE0-UI-XzQ" firstAttribute="top" secondItem="vgC-C2-EuL" secondAttribute="top" id="RBc-t2-F1J"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="RE0-UI-XzQ" secondAttribute="bottom" constant="11" id="Zhk-cs-Ny5"/>
+                            <constraint firstItem="RE0-UI-XzQ" firstAttribute="leading" secondItem="vgC-C2-EuL" secondAttribute="leading" id="pU0-ri-Nd3"/>
+                            <constraint firstItem="RE0-UI-XzQ" firstAttribute="trailing" secondItem="vgC-C2-EuL" secondAttribute="trailing" id="yMh-qU-5Ot"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="vgC-C2-EuL"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OAP-5h-hWh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="385" y="245"/>
+            <point key="canvasLocation" x="384.05797101449281" y="244.41964285714283"/>
         </scene>
         <!--Item-->
         <scene sceneID="cvH-jg-eGF">
@@ -33,7 +50,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Yvn-bl-Pfc">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Yvn-bl-Pfc">
                             <size key="itemSize" width="176" height="179"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
