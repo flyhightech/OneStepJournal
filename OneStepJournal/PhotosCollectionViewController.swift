@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RealmSwift
+
 
 private let reuseIdentifier = "Cell"
 
@@ -91,4 +93,15 @@ class PhotosCollectionViewController: UICollectionViewController {
     }
     */
 
+}
+
+
+class PhotoCell: UICollectionViewCell {
+    
+    @IBOutlet weak var previewImageView: UIImageView!
+    
+    @IBOutlet weak var monthYearLabel: UILabel!
+    
+    @IBOutlet weak var dateLabel: UILabel!
+    
 }

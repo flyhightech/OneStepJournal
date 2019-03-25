@@ -40,7 +40,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="wzE-Q0-B5b">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="wzE-Q0-B5b" customClass="PhotoCell" customModule="OneStepJournal" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="176" height="179"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -50,26 +50,47 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fjs-mD-CJW">
                                             <rect key="frame" x="0.0" y="0.0" width="176" height="179"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPB-Rh-Sty">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="March 2019" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPB-Rh-Sty">
                                             <rect key="frame" x="0.0" y="158" width="176" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="6In-P2-PFv"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
+                                            <color key="shadowColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <size key="shadowOffset" width="1" height="1"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="29" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I21-hi-O8K">
+                                            <rect key="frame" x="0.0" y="109" width="176" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="B1D-QB-BfJ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="50"/>
+                                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <size key="shadowOffset" width="1" height="1"/>
                                         </label>
                                     </subviews>
                                 </view>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="mPB-Rh-Sty" secondAttribute="trailing" id="6Ez-9e-RHJ"/>
+                                    <constraint firstItem="mPB-Rh-Sty" firstAttribute="top" secondItem="I21-hi-O8K" secondAttribute="bottom" constant="-1" id="Des-mA-7Zy"/>
                                     <constraint firstItem="fjs-mD-CJW" firstAttribute="leading" secondItem="wzE-Q0-B5b" secondAttribute="leading" id="MUe-XU-rGP"/>
                                     <constraint firstItem="fjs-mD-CJW" firstAttribute="top" secondItem="wzE-Q0-B5b" secondAttribute="top" id="Mxd-7B-oSg"/>
+                                    <constraint firstItem="I21-hi-O8K" firstAttribute="leading" secondItem="wzE-Q0-B5b" secondAttribute="leading" id="mRF-Kt-GIu"/>
                                     <constraint firstAttribute="bottom" secondItem="fjs-mD-CJW" secondAttribute="bottom" id="otO-Cm-ZIH"/>
                                     <constraint firstAttribute="bottom" secondItem="mPB-Rh-Sty" secondAttribute="bottom" id="qOM-dI-fQz"/>
+                                    <constraint firstAttribute="trailing" secondItem="I21-hi-O8K" secondAttribute="trailing" id="udn-Gx-nhK"/>
                                     <constraint firstAttribute="trailing" secondItem="fjs-mD-CJW" secondAttribute="trailing" id="x6p-Lh-L00"/>
                                     <constraint firstItem="mPB-Rh-Sty" firstAttribute="leading" secondItem="wzE-Q0-B5b" secondAttribute="leading" id="z5v-Hd-40Q"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dateLabel" destination="I21-hi-O8K" id="O4j-cp-eTN"/>
+                                    <outlet property="monthYearLabel" destination="mPB-Rh-Sty" id="cZa-rV-mpS"/>
+                                    <outlet property="previewImageView" destination="fjs-mD-CJW" id="R1l-9H-GIi"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
