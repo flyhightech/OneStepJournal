@@ -18,14 +18,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RE0-UI-XzQ">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RE0-UI-XzQ">
                                 <rect key="frame" x="0.0" y="88" width="414" height="763"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="D6j-qh-9DL">
-                                        <rect key="frame" x="43" y="34" width="110" height="200"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="D6j-qh-9DL">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="61"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="thoewhtoiwjepoiqwogiqointo foqw onondopsan[u e[othq[eoit qowf ;kS:LKNF:L EK c;tnownelkn;lkj:LITjen;wnjet; w" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3IM-GD-IVp">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="61"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="D6j-qh-9DL" secondAttribute="trailing" id="7kQ-yM-vVO"/>
+                                    <constraint firstItem="D6j-qh-9DL" firstAttribute="leading" secondItem="RE0-UI-XzQ" secondAttribute="leading" id="EaV-Bc-Azf"/>
+                                    <constraint firstItem="D6j-qh-9DL" firstAttribute="width" secondItem="RE0-UI-XzQ" secondAttribute="width" id="GOl-T8-14d"/>
+                                    <constraint firstAttribute="bottom" secondItem="D6j-qh-9DL" secondAttribute="bottom" id="LML-hT-tMN"/>
+                                    <constraint firstItem="D6j-qh-9DL" firstAttribute="top" secondItem="RE0-UI-XzQ" secondAttribute="top" id="ObP-Ji-rwg"/>
+                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -37,6 +51,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vgC-C2-EuL"/>
                     </view>
+                    <connections>
+                        <outlet property="journalTextLabel" destination="3IM-GD-IVp" id="nhV-yx-U1X"/>
+                        <outlet property="stackView" destination="D6j-qh-9DL" id="Gp4-1p-UBf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OAP-5h-hWh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
