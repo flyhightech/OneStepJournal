@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class PhotosCollectionViewController: UICollectionViewController {
+class PhotosCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
     var pictures : Results<Picture>?
     
@@ -40,10 +40,22 @@ class PhotosCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath)
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as? PhotoCell {
+    
+            if let picture = pictures?[indexPath.row] {
+                cell.previewImageView.image = picture.thumbNail()
+                cell.dateLabel.text = picture.entry?.dayString()
+                cell.monthYearLabel.text = picture.entry?.monthYearString()
+            }
+             return cell
+        }
         
-        return cell
+        return UICollectionViewCell()
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.size.width/2, height: collectionView.frame.size.height/2)
     }
 
     // MARK: UICollectionViewDelegate
