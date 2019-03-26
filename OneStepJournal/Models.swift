@@ -14,7 +14,7 @@ import Toucan
 class Entry : Object {
     @objc dynamic var text = ""
     @objc dynamic var date = Date()
-    let picture = List<Picture>()
+    let pictures = List<Picture>()
     
     func datePrettyString() -> String {
         let formatter = DateFormatter()

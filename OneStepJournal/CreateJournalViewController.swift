@@ -86,7 +86,7 @@ class CreateJournalViewController: UIViewController, UIImagePickerControllerDele
             entry.text = journalTextView.text
             for image in images {
                 let picture = Picture(image: image)
-                entry.picture.append(picture)
+                entry.pictures.append(picture)
                 picture.entry = entry
                 
             }

@@ -80,7 +80,7 @@ class JournalTableViewController: UITableViewController {
             
             if let entry = entries?[indexPath.row] {
                 cell.previewTextCell.text = entry.text
-                if let image = entry.picture.first?.thumbNail() {
+                if let image = entry.pictures.first?.thumbNail() {
                     cell.imageViewWidth.constant = 100
                     cell.previewImageView.image = image
                 } else {
