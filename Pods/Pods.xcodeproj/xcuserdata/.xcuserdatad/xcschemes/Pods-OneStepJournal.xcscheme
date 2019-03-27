@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A020443A5DE8C0B357324CA54BD01868"
+               BlueprintIdentifier = "8C94E6983F7F0A01644BD4AC50EE3CA2"
                BlueprintName = "Pods-OneStepJournal"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "Pods-OneStepJournal.framework">

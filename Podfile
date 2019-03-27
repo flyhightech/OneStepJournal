@@ -8,6 +8,7 @@ target 'OneStepJournal' do
   use_frameworks!
 
   pod 'RealmSwift'
-  pod 'Toucan'
+  pod 'Toucan', '~> 1.1'
+  pod 'Spring', :git => 'https://github.com/MengTo/Spring.git'
 
 end

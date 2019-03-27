@@ -60,7 +60,7 @@
             </objects>
             <point key="canvasLocation" x="384.05797101449281" y="244.41964285714283"/>
         </scene>
-        <!--Item-->
+        <!--Photos-->
         <scene sceneID="cvH-jg-eGF">
             <objects>
                 <collectionViewController id="cLX-68-zLW" customClass="PhotosCollectionViewController" customModule="OneStepJournal" customModuleProvider="target" sceneMemberID="viewController">
@@ -133,7 +133,10 @@
                             <outlet property="delegate" destination="cLX-68-zLW" id="Epg-PT-GfL"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Item" id="ec1-9f-gxW"/>
+                    <tabBarItem key="tabBarItem" title="Photos" image="camera" id="ec1-9f-gxW"/>
+                    <connections>
+                        <segue destination="7YL-je-kRH" kind="showDetail" identifier="photoToDetail" id="kQ2-P0-33n"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wAP-lw-szi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -143,7 +146,9 @@
         <scene sceneID="UdU-72-caM">
             <objects>
                 <tabBarController id="cXj-HE-PEc" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="Step One Journal" id="WiB-cH-l5f"/>
+                    <navigationItem key="navigationItem" title="Step One Journal" id="WiB-cH-l5f">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="KE9-i8-Gdq"/>
+                    </navigationItem>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="024-6G-fwZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -158,7 +163,7 @@
             </objects>
             <point key="canvasLocation" x="1178" y="-474"/>
         </scene>
-        <!--Item-->
+        <!--List-->
         <scene sceneID="Fqk-1N-HXp">
             <objects>
                 <tableViewController id="Mco-8f-iHy" customClass="JournalTableViewController" customModule="OneStepJournal" customModuleProvider="target" sceneMemberID="viewController">
@@ -282,12 +287,13 @@
                             <outlet property="delegate" destination="Mco-8f-iHy" id="aI6-7R-r6i"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="iQr-eM-030"/>
+                    <tabBarItem key="tabBarItem" title="List" image="database" id="iQr-eM-030"/>
                     <connections>
                         <outlet property="cameraButton" destination="aTu-9r-ytq" id="pdK-6S-VEp"/>
                         <outlet property="plusButton" destination="JcH-G2-kWd" id="9F3-hC-Ish"/>
                         <outlet property="topHeaderView" destination="5Bf-RG-yPu" id="Msf-yY-uAL"/>
                         <segue destination="Jy2-nr-tsE" kind="presentation" identifier="goToNew" id="L1h-Ig-dgy"/>
+                        <segue destination="7YL-je-kRH" kind="showDetail" id="ygf-S1-i2Q"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9FH-9U-zDC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -465,6 +471,11 @@
         <image name="add" width="204.80000305175781" height="204.80000305175781"/>
         <image name="blueCamera" width="204.80000305175781" height="204.80000305175781"/>
         <image name="calendar" width="204.80000305175781" height="204.80000305175781"/>
+        <image name="camera" width="30" height="30"/>
+        <image name="database" width="30" height="30"/>
         <image name="whiteCamera" width="204.80000305175781" height="204.80000305175781"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ygf-S1-i2Q"/>
+    </inferredMetricsTieBreakers>
 </document>
