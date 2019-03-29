@@ -126,16 +126,16 @@ class CreateJournalViewController: UIViewController, UIImagePickerControllerDele
         if let chosenImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             images.append(chosenImage)
             
-            let imageView = springImage
-            imageView.heightAnchor.constraint(equalToConstant: 70.0).isActive = true
-            imageView.widthAnchor.constraint(equalToConstant: 70.0).isActive = true
-            imageView.image = chosenImage
-            imageView.contentMode = .scaleAspectFill
-            imageView.clipsToBounds = true
-            stackView.addArrangedSubview(imageView)
-            imagePicker.dismiss(animated: true) {
-                
-            }
+//            let imageView =
+////            imageView.heightAnchor.constraint(equalToConstant: 70.0).isActive = true
+//            imageView.widthAnchor.constraint(equalToConstant: 70.0).isActive = true
+//            imageView.image = chosenImage
+//            imageView.contentMode = .scaleAspectFill
+//            imageView.clipsToBounds = true
+//            stackView.addArrangedSubview(imageView)
+//            imagePicker.dismiss(animated: true) {
+//
+//            }
         }
     }
     
